@@ -1,17 +1,303 @@
-/* Error: Expected expression.
- *     ,
- * 343 |           color: ;
- *     |                  ^
- *     '
- *   sass\stayle.scss 343:18  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Expected expression.\a     \2577 \a 343 \2502            color: ;\d\a     \2502                   ^\a     \2575 \a   sass\\stayle.scss 343:18  root stylesheet";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+.hero_img {
+  display: none;
+}
+
+.bars {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  max-width: 1560px;
+  height: 812px;
+  font-family: "Roboto", sans-serif;
+  background-image: url(/imgs/Header\ 2.jpg);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+  margin: 0 auto;
+}
+
+.container {
+  padding: 37px 51px 25px 51px;
+}
+.container nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.container nav .navbar-logo {
+  display: flex;
+  column-gap: 74px;
+  align-items: center;
+}
+.container nav .navbar-logo .navbar_about ul {
+  display: flex;
+  list-style: none;
+  column-gap: 40px;
+}
+.container nav .navbar-logo .navbar_about ul a {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+}
+.container nav .navbar_search {
+  align-items: center;
+}
+.container nav .navbar_search ul {
+  display: flex;
+  list-style: none;
+}
+.container nav .navbar_search ul li {
+  font-size: 26px;
+}
+.container .mosscov {
+  margin-top: 191px;
+  padding-left: 100px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 37px;
+}
+.container .mosscov .moscov h1 {
+  color: #000;
+  font-size: 100px;
+  font-weight: 500;
+}
+.container .mosscov .moscov_h2 h2 {
+  max-width: 640px;
+  color: #000;
+  font-size: 22px;
+  font-weight: 400;
+}
+.container .mosscov .more ul {
+  list-style: none;
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+}
+.container .mosscov .more ul li p {
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+}
+.container .icon {
+  margin-top: 94px;
+}
+.container .icon ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  list-style: none;
+}
+.container .icon ul li {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 700px) {
+  header {
+    background-image: none;
+  }
+  .container {
+    padding: 20px 30px 20px 30px;
+  }
+  .container nav .navbar-logo {
+    column-gap: 50px;
+  }
+  .container nav .navbar-logo .navbar_about ul {
+    column-gap: 40px;
+  }
+  .container .mosscov {
+    margin-top: 100px;
+    padding-left: 80px;
+    row-gap: 30px;
+  }
+  .container .mosscov .moscov h1 {
+    font-size: 80px;
+  }
+  .container .icon {
+    margin-top: 20px;
+  }
+  .container .icon ul {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    list-style: none;
+    margin: 0 auto;
+    max-width: 300px;
+  }
+  .container .icon ul li {
+    font-size: 30px;
+  }
+  .container .hero_img {
+    display: block;
+    margin: 0 auto;
+  }
+  .container .hero_img img {
+    width: 650px;
+  }
+}
+@media screen and (max-width: 700px) and (min-width: 550px) {
+  header {
+    background-image: none;
+  }
+  .hero_img {
+    display: inline-block;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .container {
+    padding: 20px 30px;
+  }
+  .container nav .navbar-logo .navbar_about {
+    display: none;
+  }
+  .container nav .navbar_search {
+    align-items: center;
+  }
+  .container nav .navbar_search ul .Search {
+    display: none;
+  }
+  .container nav .navbar_search ul .bars {
+    display: block;
+    font-size: 30px;
+  }
+  .container .mosscov {
+    margin-top: 80px;
+    padding-left: 0px;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .container .mosscov .moscov h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+  .container .mosscov .moscov_h2 h2 {
+    max-width: 400px;
+    font-size: 16px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .container .mosscov .more ul {
+    list-style: none;
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    max-width: 100px;
+    margin: 0 auto;
+  }
+  .container .mosscov .more ul li p {
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .container .icon {
+    margin-top: 20px;
+  }
+  .container .icon ul {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    list-style: none;
+    max-width: 20px;
+    margin: 0 auto;
+  }
+  .container .icon ul li {
+    font-size: 30px;
+  }
+  .container .hero_img {
+    display: inline-block;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .container .hero_img img {
+    max-width: 500px;
+  }
+}
+@media screen and (max-width: 550px) and (min-width: 320px) {
+  header {
+    background-image: none;
+  }
+  .hero_img {
+    display: inline-block;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  .container {
+    padding: 10px 20px;
+  }
+  .container nav .navbar-logo .navbar_about {
+    display: none;
+  }
+  .container nav .navbar_search {
+    align-items: center;
+  }
+  .container nav .navbar_search ul .Search {
+    display: none;
+  }
+  .container nav .navbar_search ul .bars {
+    display: block;
+    font-size: 30px;
+  }
+  .container .mosscov {
+    margin-top: 50px;
+    padding-left: 0px;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .container .mosscov .moscov h1 {
+    font-size: 25px;
+    text-align: center;
+  }
+  .container .mosscov .moscov_h2 h2 {
+    max-width: 420px;
+    font-size: 16px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .container .mosscov .more ul {
+    list-style: none;
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    max-width: 100px;
+    margin: 0 auto;
+  }
+  .container .mosscov .more ul li p {
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .container .icon {
+    margin-top: 20px;
+  }
+  .container .icon ul {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    list-style: none;
+    max-width: 170px;
+    margin: 0 auto;
+  }
+  .container .icon ul li {
+    font-size: 30px;
+  }
+  .container .hero_img {
+    display: inline-block;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .container .hero_img img {
+    max-width: 270px;
+  }
+}
+
+/*# sourceMappingURL=stayle.css.map */
